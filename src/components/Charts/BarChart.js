@@ -2,7 +2,7 @@ import React from 'react'
 import { ResponsiveBar } from '@nivo/bar'
 import PropTypes from 'prop-types'
 
-const BarChart = ({ data, keys }) => (
+const BarChart = ({ data, keys, colorScheme }) => (
   <ResponsiveBar
     data={data}
     keys={keys}
@@ -11,7 +11,7 @@ const BarChart = ({ data, keys }) => (
     padding={0.3}
     valueScale={{ type: 'linear' }}
     // indexScale={{ type: "band", round: true }}
-    colors={{ scheme: 'nivo' }}
+    colors={{ scheme: colorScheme }}
     borderColor={{ from: 'color', modifiers: [['darker', 1.6]] }}
     axisTop={null}
     axisRight={null}
@@ -65,7 +65,8 @@ const BarChart = ({ data, keys }) => (
 
 BarChart.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object),
-  keys: PropTypes.arrayOf(PropTypes.string)
+  keys: PropTypes.arrayOf(PropTypes.string),
+  colorScheme: PropTypes.string
 }
 
 export default BarChart

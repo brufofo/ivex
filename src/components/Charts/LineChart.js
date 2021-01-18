@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import { ResponsiveLine } from '@nivo/line'
 
-const LineChart = ({ data, keys }) => {
+const LineChart = ({ data, keys, colorScheme }) => {
   function prepareData() {
     const newData = []
     keys.forEach((element) => {
@@ -25,6 +25,7 @@ const LineChart = ({ data, keys }) => {
       data={prepareData()}
       margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
       xScale={{ type: 'point' }}
+      colors={{ scheme: colorScheme }}
       yScale={{
         type: 'linear',
         min: 'auto',
@@ -90,6 +91,7 @@ const LineChart = ({ data, keys }) => {
 
 LineChart.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object),
-  keys: PropTypes.arrayOf(PropTypes.string)
+  keys: PropTypes.arrayOf(PropTypes.string),
+  colorScheme: PropTypes.string
 }
 export default LineChart

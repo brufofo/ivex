@@ -2,7 +2,7 @@ import { ResponsivePie } from '@nivo/pie'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const PieChart = ({ data, keys }) => {
+const PieChart = ({ data, keys, colorScheme }) => {
   function prepareData() {
     const newData = []
 
@@ -25,7 +25,7 @@ const PieChart = ({ data, keys }) => {
       innerRadius={0.5}
       padAngle={0.7}
       cornerRadius={3}
-      colors={{ scheme: 'nivo' }}
+      colors={{ scheme: colorScheme }}
       borderWidth={1}
       borderColor={{ from: 'color', modifiers: [['darker', 0.2]] }}
       radialLabelsSkipAngle={10}
@@ -136,7 +136,8 @@ const PieChart = ({ data, keys }) => {
 
 PieChart.propTypes = {
   data: PropTypes.arrayOf(PropTypes.object),
-  keys: PropTypes.arrayOf(PropTypes.string)
+  keys: PropTypes.arrayOf(PropTypes.string),
+  colorScheme: PropTypes.string
 }
 
 export default PieChart

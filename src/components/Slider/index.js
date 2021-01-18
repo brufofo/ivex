@@ -6,8 +6,9 @@ import LineChart from '../Charts/LineChart'
 import PieChart from '../Charts/PieChart'
 // const dataJson = require('../../data')
 import dataJson from '../../dataJson'
+import PropTypes from 'prop-types'
 
-const Slider = () => {
+const Slider = ({ colorScheme }) => {
   const [translateX, setTranslateX] = useState(0)
   const [listSize, setListSize] = useState(0)
   const [data, setData] = useState([])
@@ -76,13 +77,13 @@ const Slider = () => {
       <S.List ref={listRef}>
         <S.Track translateX={translateX} width={listSize * Kmax}>
           <S.Chart>
-            <BarChart data={data} keys={keys} />
+            <BarChart data={data} keys={keys} colorScheme={colorScheme} />
           </S.Chart>
           <S.Chart>
-            <LineChart data={data} keys={keys} />
+            <LineChart data={data} keys={keys} colorScheme={colorScheme} />
           </S.Chart>
           <S.Chart>
-            <PieChart data={data} keys={keys} />
+            <PieChart data={data} keys={keys} colorScheme={colorScheme} />
           </S.Chart>
         </S.Track>
       </S.List>
@@ -92,6 +93,10 @@ const Slider = () => {
       </S.NavigateRight>
     </S.Wrapper>
   )
+}
+
+Slider.propTypes = {
+  colorScheme: PropTypes.string
 }
 
 export default Slider
