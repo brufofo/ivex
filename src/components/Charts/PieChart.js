@@ -33,6 +33,7 @@ const PieChart = ({ data, keys }) => {
       radialLabelsLinkColor={{ from: 'color' }}
       sliceLabelsSkipAngle={10}
       sliceLabelsTextColor="#333333"
+      isInteractive={false}
       defs={[
         {
           id: 'dots',
@@ -118,6 +119,7 @@ const PieChart = ({ data, keys }) => {
           itemOpacity: 1,
           symbolSize: 18,
           symbolShape: 'circle',
+
           effects: [
             {
               on: 'hover',
