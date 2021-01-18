@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/ivex/static/js/main.f87737da.chunk.js",
-    "main.js.map": "/ivex/static/js/main.f87737da.chunk.js.map",
+    "main.js": "/ivex/static/js/main.393ecf99.chunk.js",
+    "main.js.map": "/ivex/static/js/main.393ecf99.chunk.js.map",
     "runtime-main.js": "/ivex/static/js/runtime-main.f36f3e87.js",
     "runtime-main.js.map": "/ivex/static/js/runtime-main.f36f3e87.js.map",
-    "static/js/2.caf3a0e4.chunk.js": "/ivex/static/js/2.caf3a0e4.chunk.js",
-    "static/js/2.caf3a0e4.chunk.js.map": "/ivex/static/js/2.caf3a0e4.chunk.js.map",
+    "static/js/2.1a62443a.chunk.js": "/ivex/static/js/2.1a62443a.chunk.js",
+    "static/js/2.1a62443a.chunk.js.map": "/ivex/static/js/2.1a62443a.chunk.js.map",
     "index.html": "/ivex/index.html",
-    "static/js/2.caf3a0e4.chunk.js.LICENSE.txt": "/ivex/static/js/2.caf3a0e4.chunk.js.LICENSE.txt"
+    "static/js/2.1a62443a.chunk.js.LICENSE.txt": "/ivex/static/js/2.1a62443a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f36f3e87.js",
-    "static/js/2.caf3a0e4.chunk.js",
-    "static/js/main.f87737da.chunk.js"
+    "static/js/2.1a62443a.chunk.js",
+    "static/js/main.393ecf99.chunk.js"
   ]
 }
